@@ -44,7 +44,7 @@
 			"setPermission": [
 				{
 					"runtime": "0777",
-					"public_html": "0766",
+					"public_html": "0777",
 					"config/_external": "0777",
 					"backend_sidemenu_items": "0777",
 					"yii": "0755",

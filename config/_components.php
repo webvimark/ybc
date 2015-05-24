@@ -9,7 +9,7 @@ return [
 	],
 	'request'      => [
 		// !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-		'cookieValidationKey' => '719Lmt4JM40EVhTj3g3Dd_e4Kvdqpj-M',
+		'cookieValidationKey' => '',
 	],
 	'cache'        => [
 		'class' => 'yii\caching\ApcCache',

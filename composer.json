@@ -44,7 +44,10 @@
 			"setPermission": [
 				{
 					"runtime": "0777",
-					"public_html": "0777",
+					"public_html/assets": "0777",
+					"public_html/uploads": "0777",
+					"public_html/images": "0777",
+					"public_html/robots.txt": "0777",
 					"config/_external": "0777",
 					"backend_sidemenu_items": "0777",
 					"yii": "0755",

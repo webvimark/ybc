@@ -11,4 +11,6 @@ require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 
 $config = require(__DIR__ . '/../config/web.php');
 
+Yii::$classMap['webvimark\components\BaseController'] = '@app/components/BaseController.php';
+
 (new yii\web\Application($config))->run();

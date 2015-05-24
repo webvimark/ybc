@@ -1,0 +1,29 @@
+@startuml
+
+class Page {
+	const TYPE_TEXT
+	const TYPE_INTERNAL_LINK
+	const TYPE_EXTERNAL_LINK
+	--
+	string $name
+	string $url
+	string $menu_image
+	int $status
+	int $sorter
+	int $type
+	int $is_main
+	text $body
+}
+
+class PagePlace {
+	string $name
+}
+
+class PageSystemPlace {
+	int $active
+	int $sorter
+	string $name
+	string $path
+}
+
+@enduml

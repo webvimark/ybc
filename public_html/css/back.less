@@ -1,0 +1,167 @@
+// ================= Variables =================
+@sideMenuBackground: #2C4861;
+@sideMenuLinkColor: #DBDBDB;
+@sideMenuBorderColor: #00744A;
+@sideMenuLinkHoverColor: #1D332B;
+//@sideMenuLinkHoverColor: #00744A;
+//@sideMenuLinkHoverColor: #69690A;
+@sideMenuNavHeaderColor: #A4C3FA;
+
+html,
+body {
+	height: 100%;
+}
+#main-wrapper {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -60px;
+	padding: 0 0 60px;
+	position: relative;
+}
+
+.lte-hide-title {
+	display: none;
+}
+
+// ================= Header =================
+
+.skin-blue .navbar .language-selector > li > a:hover {
+	color: #f9f9f9;
+}
+// ================= Side menu =================
+#main-side-menu {
+	left: 0;
+	width: 250px;
+	position: absolute;
+	top: 0;
+	height: auto;
+	min-height: 100%;
+	background: @sideMenuBackground;
+	ul {
+		li {
+			margin-top: 0;
+			i {
+				margin-right:10px;
+			}
+		}
+		width: 250px;
+	}
+	li {
+		&:hover > ul {
+			display: block;
+		}
+		.dropdown-submenu {
+			position: relative;
+		}
+	}
+	.dropdown-menu {
+		left:245px;
+		top:-5px;
+		background: @sideMenuBackground;
+		li {
+			&:last-child a {
+				border-bottom: none;
+			}
+			&:hover > ul {
+				display: block;
+			}
+			.dropdown-submenu {
+				position: relative;
+			}
+		}
+	}
+	.nav {
+		a:focus, a:hover, li.active > a {
+			background:@sideMenuLinkHoverColor;
+			color:@sideMenuLinkColor;
+			text-shadow:none;
+		}
+		a {
+			padding-top:7px;
+			border-bottom: 1px solid @sideMenuBorderColor;
+			padding-bottom:7px;
+			color:@sideMenuLinkColor;
+		}
+	}
+	.nav-header {
+		padding-left: 10px;
+		padding-top: 15px;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		font-size: 13px;
+		font-weight: bold;
+		color:@sideMenuNavHeaderColor;
+	}
+}
+
+// ================= Dashboard =================
+.dashboard-item {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	padding: 5px;
+	background: #f5f5f5;
+
+	.dashboard-item-title {
+		display: block;
+		font-weight: bold;
+	}
+}
+
+
+#main-content {
+	margin-left: 250px;
+}
+
+
+span.page-tree-type {
+	color: gray;
+	font-size: 12px;
+}
+
+// ================= Content builder =================
+.content-template-builder {
+	.add-widget {
+		z-index: 9999;
+		position: absolute;
+		top: -40px;
+		display: none;
+		border: 2px solid darkgreen;
+		background: lightgreen;
+		padding: 10px;
+		font-size: 17px;
+		cursor: pointer;
+	}
+	.size-small {
+		min-height: 130px;
+	}
+	.size-medium {
+		min-height: 300px;
+	}
+	.size-large {
+		min-height: 600px;
+	}
+	.template-element {
+		position: relative;
+		border: 2px solid darkgray;
+		padding: 10px;
+		margin-bottom:20px;
+	}
+	.template-content {
+		background: #f5f5f5;
+	}
+	[data-position] {
+		border: 2px solid darkblue;
+	}
+}
+.available-widgets-container {
+	.available-widget {
+		padding: 10px;
+		border: 1px dashed #CCC;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		&:hover {
+			background: #f1f1f1;
+		}
+	}
+}

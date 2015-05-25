@@ -37,6 +37,7 @@
 			"setPermission": [
 				{
 					"runtime": "0777",
+					"migrations": "0777",
 					"public_html/assets": "0777",
 					"public_html/uploads": "0777",
 					"public_html/images": "0777",

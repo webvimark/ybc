@@ -13,6 +13,7 @@ use yii\behaviors\TimestampBehavior;
  * @property string $contact_email
  * @property integer $enable_seo_tracking
  * @property string $seo_tracking_script
+ * @property string $seo_meta_tags
  * @property integer $created_at
  * @property integer $updated_at
  */
@@ -35,7 +36,7 @@ class Settings extends \webvimark\components\BaseActiveRecord
 	{
 		return [
 			'general' => ['logo', 'contact_email'],
-			'seo' => ['enable_seo_tracking', 'seo_tracking_script'],
+			'seo' => ['enable_seo_tracking', 'seo_tracking_script', 'seo_meta_tags'],
 		];
 	}
 
@@ -87,7 +88,7 @@ class Settings extends \webvimark\components\BaseActiveRecord
 			[['contact_email'], 'required'],
 			[['contact_email'], 'email'],
 			[['enable_seo_tracking'], 'integer'],
-			[['seo_tracking_script'], 'string'],
+			[['seo_tracking_script', 'seo_meta_tags'], 'string'],
 			[['contact_email'], 'string', 'max' => 255],
 			[['contact_email'], 'trim'],
 			[['logo'], 'image', 'maxSize' => 1024*1024*5, 'extensions' => ['gif', 'png', 'jpg', 'jpeg']]
@@ -105,6 +106,7 @@ class Settings extends \webvimark\components\BaseActiveRecord
 			'contact_email' => Yii::t('app', 'Contact Email'),
 			'enable_seo_tracking' => Yii::t('app', 'Enable SEO tracking'),
 			'seo_tracking_script' => Yii::t('app', 'SEO tracking script'),
+			'seo_meta_tags' => Yii::t('app', 'Additional meta tags'),
 			'created_at' => Yii::t('app', 'Created'),
 			'updated_at' => Yii::t('app', 'Updated'),
 		];

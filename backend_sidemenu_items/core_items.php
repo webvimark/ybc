@@ -11,27 +11,7 @@ return [
 		'label' => '<i class="fa fa-book"></i> '. Yii::t('app', 'Content') .' <i class="fa pull-right fa-angle-left"></i>',
 		'options'=>['class'=>'treeview'],
 		'url'=>'#',
-		'items'=>[
-			'11'=>[
-				'label'   => '<i class="fa fa-list-alt"></i> '.Yii::t('app', 'Menu / pages').' <i class="fa pull-right fa-angle-left"></i>',
-				'options' => ['class' => 'treeview'],
-				'url'     => '#',
-				'items'   => ContentMenu::getListOfMenus(),
-			],
-
-			'12' => [
-				'label' => '<i class="fa fa-pagelines"></i> ' . Yii::t('app', 'Page templates'),
-				'url'   => ['/content/content-template/index']
-			],
-
-			'13' => [
-				'label' => '<i class="fa fa-code-fork"></i> ' . Yii::t('app', 'Template widgets'),
-				'url'   => ['/content/content-template-widget/index']
-			],
-			'14'=>[
-				'label' => '<i class="fa fa-table"></i> ' . ContentModule::t('app', 'Manage menus'), 'url' => ['/content/content-menu/index']
-			],
-		],
+		'items'=>ContentModule::getSideMenuItems(),
 
 	],
 

@@ -18,6 +18,7 @@ class m150523_092924_settings_module_init extends Migration
 			'contact_email'       => 'string not null',
 			'enable_seo_tracking' => 'smallint(1) not null default 0',
 			'seo_tracking_script' => 'text',
+			'seo_meta_tags'       => 'text',
 			'created_at'          => 'int not null',
 			'updated_at'          => 'int not null',
 		), $tableOptions);

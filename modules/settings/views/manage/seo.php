@@ -37,6 +37,9 @@ $form = ActiveForm::begin([
 	</div>
 </div>
 
+<?= $form->field($model, 'seo_meta_tags')->textarea(['rows'=>7]) ?>
+
+
 
 <?= Html::submitButton(
 	'<span class="glyphicon glyphicon-ok"></span> ' . Yii::t('app', 'Save'),

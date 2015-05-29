@@ -23,6 +23,8 @@ return [
 	],
 	'content' => [
 		'class' => 'webvimark\ybc\content\ContentModule',
+//		'enablePageCache'=>true,
+//		'enableTemplates'=>false,
 		'functionalPages'=>[
 			'news/default/index' => Yii::t('app', 'News'),
 			'site/contact' => 'Contacts',

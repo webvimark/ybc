@@ -1,7 +1,9 @@
 <?php
 use webvimark\modules\UserManagement\UserManagementModule;
 use webvimark\ybc\content\ContentModule;
-use webvimark\ybc\content\models\ContentMenu;
+
+//You can user float numbers as array keys for menu elements
+//Like '27.5'=> ['some element']
 
 return [
 	'0' => ['label' => '<i class="fa fa-dashboard"></i> Dashboard', 'url' => ['/dashboard/index']],

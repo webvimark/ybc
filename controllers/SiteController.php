@@ -28,6 +28,26 @@ class SiteController extends Controller
 		];
 	}
 
+	/**
+	 * @param \yii\base\Action $action
+	 *
+	 * @return bool
+	 */
+	public function beforeAction($action)
+	{
+		if ( parent::beforeAction($action) )
+		{
+			if ( is_file(Yii::getAlias('@app/templates/default/layout.php')) )
+			{
+				$this->layout = '@app/templates/default/layout.php';
+			}
+
+			return true;
+		}
+
+		return false;
+	}
+
 	public function actionIndex()
 	{
 		return $this->render('index');

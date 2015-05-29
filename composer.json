@@ -17,7 +17,8 @@
 		"webvimark/module-user-management": "*",
 		"webvimark/ybc-content": "dev-master",
 		"webvimark/multilanguage": "*",
-		"odaialali/yii2-toastr": "*"
+		"odaialali/yii2-toastr": "*",
+		"raoul2000/yii2-scrollup-widget": "*"
 	},
 	"require-dev": {
 		"yiisoft/yii2-codeception": "*",

@@ -3,6 +3,7 @@
  * @var $content string
  * @var $this yii\web\View
  */
+use webvimark\behaviors\multilanguage\language_selector_widget\LanguageSelector;
 use webvimark\ybc\content\components\MenuWidget;
 use webvimark\ybc\content\models\ContentTemplate;
 use yii\bootstrap\NavBar;
@@ -12,13 +13,22 @@ use yii\bootstrap\NavBar;
 <?php $this->beginContent('@app/views/layouts/main.php') ?>
 
 
-<?php NavBar::begin() ?>
+<?php NavBar::begin([
+	'brandLabel'=>Yii::$app->name,
+]) ?>
+
+<?= LanguageSelector::widget([
+	'wrapperClass'=>'navbar-right',
+	'useFullLanguageName'=>false,
+]) ?>
+
 <?= MenuWidget::widget([
 	'code'=>'topMenu',
 	'options'=>[
-		'class'=>'nav navbar-nav',
+		'class'=>'nav navbar-nav navbar-right',
 	],
 ]) ?>
+
 <?php NavBar::end() ?>
 
 <div class="container">

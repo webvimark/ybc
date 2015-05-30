@@ -20,10 +20,10 @@ class FrontendAsset extends AssetBundle
 	public $css = [
 		'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css',
 		'http://themes.bootstrappage.com/voice/assets/css/custom.css',
-		'http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css',
+//		'http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css',
 	];
 	public $js = [
-		'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',
+//		'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',
 	];
 	public $depends = [
 		'yii\web\YiiAsset',

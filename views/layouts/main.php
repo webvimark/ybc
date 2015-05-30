@@ -48,7 +48,7 @@ FrontendAsset::register($this);
 <?php
 use raoul2000\widget\scrollup\Scrollup;
 
-echo Scrollup::widget([
+Scrollup::widget([
 	'theme' => Scrollup::THEME_IMAGE,
 	'pluginOptions' => [
 		'scrollText' => "To top", // Text for element

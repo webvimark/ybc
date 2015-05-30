@@ -34,7 +34,7 @@ use yii\bootstrap\NavBar;
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			<img class="img-responsive" src="http://placehold.it/1200x300" alt="">
+<!--			<img class="img-responsive" src="http://placehold.it/1200x300" alt="">-->
 		</div>
 	</div>
 </div>

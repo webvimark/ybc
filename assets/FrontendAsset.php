@@ -18,8 +18,9 @@ class FrontendAsset extends AssetBundle
 	public $basePath = '@webroot';
 	public $baseUrl = '@web';
 	public $css = [
+		'css/default.css',
 		'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css',
-		'http://themes.bootstrappage.com/voice/assets/css/custom.css',
+//		'http://themes.bootstrappage.com/voice/assets/css/custom.css',
 //		'http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css',
 	];
 	public $js = [
@@ -27,6 +28,6 @@ class FrontendAsset extends AssetBundle
 	];
 	public $depends = [
 		'yii\web\YiiAsset',
-		'yii\bootstrap\BootstrapAsset',
+		'yii\bootstrap\BootstrapPluginAsset',
 	];
 }

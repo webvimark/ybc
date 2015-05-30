@@ -86,6 +86,7 @@ class m150530_093510_create_default_content extends Migration
 			}
 		}
 
+		Yii::$app->cache->flush();
 	}
 
 	public function safeDown()
@@ -100,5 +101,8 @@ class m150530_093510_create_default_content extends Migration
 		ContentMenu::deleteAll([
 			'code'=>['topMenu', 'sideMenu'],
 		]);
+
+		Yii::$app->cache->flush();
+
 	}
 }

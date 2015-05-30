@@ -2,22 +2,12 @@
 
 namespace app\controllers;
 
+use app\models\ContactForm;
+use webvimark\components\BaseController;
 use Yii;
-use yii\web\Controller;
 
-class SiteController extends Controller
+class SiteController extends BaseController
 {
-//	/**
-//	 * @return array
-//	 */
-//	public function behaviors()
-//	{
-//		return [
-//			'class' => 'yii\filters\PageCache',
-//			'duration' => 3600,
-//			'only'=>['sitemapxml'],
-//		];
-//	}
 
 	public function actions()
 	{
@@ -48,9 +38,21 @@ class SiteController extends Controller
 		return false;
 	}
 
+	/**
+	 * Main page (if not set another in content menu)
+	 *
+	 * @return string
+	 */
 	public function actionIndex()
 	{
 		return $this->render('index');
+	}
+
+	public function actionContact()
+	{
+		$model = new ContactForm();
+
+		return $this->renderIsAjax('contact', compact('model'));
 	}
 
 	public function actionSitemapxml()

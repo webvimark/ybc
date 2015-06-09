@@ -5,6 +5,6 @@ return [
 	'charset'           => 'utf8',
 	'enableSchemaCache' => true,
 	'dsn'               => 'mysql:host=localhost;dbname=ybc',
-	'username'          => '',
-	'password'          => '',
+	'username'          => 'root',
+	'password'          => '123759',
 ];

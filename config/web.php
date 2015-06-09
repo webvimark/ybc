@@ -5,6 +5,7 @@ use yii\helpers\FileHelper;
 
 $config = [
 	'id'         => 'ybc',
+	'name'       => 'ybc',
 	'basePath'   => dirname(__DIR__),
 	'bootstrap'  => ['log'],
 	'modules'    => require( __DIR__ . '/_modules.php' ),

@@ -67,7 +67,7 @@ class SeedController extends Controller
 						->select($fk_id_field)
 						->from($fk_table)
 						->indexBy($fk_id_field)
-						->limit(1000)
+						->limit(5000)
 						->column();
 				}
 			}
@@ -107,7 +107,7 @@ class SeedController extends Controller
 					}
 					elseif ( $data->type == 'text' )
 					{
-						$res[$field] = $this->lorem(rand(2, 10), self::LOREM_TEXT);
+						$res[$field] = $this->lorem(rand(2, 100), self::LOREM_TEXT);
 					}
 					elseif ( in_array($data->type, ['smallint', 'tinyint']) )
 					{

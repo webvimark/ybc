@@ -96,6 +96,10 @@ class SeedController extends Controller
 						{
 							$res[$field] = md5(uniqid()) . '.jpg';
 						}
+						elseif ( stripos($field, 'email') !== false )
+						{
+							$res[$field] = uniqid(). '@' . uniqid() . '.com';
+						}
 						else
 						{
 							$res[$field] = $this->lorem(rand(1, 3));
@@ -104,6 +108,10 @@ class SeedController extends Controller
 					elseif ( $data->type == 'text' )
 					{
 						$res[$field] = $this->lorem(rand(2, 10), self::LOREM_TEXT);
+					}
+					elseif ( in_array($data->type, ['smallint', 'tinyint']) )
+					{
+						$res[$field] = rand(0, 1);
 					}
 					elseif ( $data->type == 'integer' )
 					{

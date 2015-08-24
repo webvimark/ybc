@@ -13,6 +13,7 @@ return [
 	],
 	'cache'        => [
 		'class' => 'yii\caching\ApcCache',
+		'keyPrefix'=>'some_unique_prefix',
 	],
 	'user' => [
 		'class' => 'webvimark\modules\UserManagement\components\UserConfig',
